@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+        <meta charset="utf-8">
+
+
+<style>
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+ font-size: 20px;
+}
+.page-bg {
+  background: url('nynight-logo.jpg'); 
+   -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);  
+   position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+} 
+
+body {
+    width:100%;
+    height:100%;
+    margin: 0 auto;
+    max-width: 960px;
+  background-color:white(145, 179, 219);
+} 
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position:block;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    
+
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 0px;
+}
+
+#main-logo{font-family:  'Allura';font-size: 40px;text-align: center;}
+
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+.icon-bar {
+
+
+  float: right;
+
+  /* top: 50%; */
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: inline-block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+#div1 {
+    width: 400px;
+    height: 600px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+
+.col1{width:70%;float:left;margin-right:3%}
+.col2{width:25%;float:left}
+.by{
+    background-color: white;
+    opacity: 0.3;
+    filter: Alpha(opacity=50); 
+    font-style: oblique;
+    font-weight: lighter/* IE8 and earlier */
+}
+.quote {border: 0;
+    margin: 0;
+    padding-bottom: 5px;
+
+    background: none;
+    color: red;
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+    font-style: italic;
+    line-height: 1.4 !important;
+    margin: 0;
+    position: relative;
+    text-shadow: 0 1px white;
+    z-index: 600;}
+   
+.main-title {border-bottom: 2px solid red; padding-bottom: 2px;}
+
+p::first-letter {
+    font-size: 200%;
+    color: red;
+}
+.content{line-height: 1.6}
+
+.imglist{float:left}
+
+.scrollbox{background-color: lightblue;
+    width: 600px;
+    height: 400px;
+    overflow: auto;}
+
+.lista{float:left;}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div class="page-bg"></div>
+<div id="mySidenav" class="sidenav">
+    
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Shop</a>
+  <a href="#">Guide</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="google_translate_element"></div>
+
+<h1 id="main-logo">Postcard from New York </h1>
+<div id="main">
+  <span style="font-family:  'Allura';font-size:30px;cursor:pointer" onclick="openNav()">&#9776;            travelBlog</span>
+
+
+
+      <div class="container">
+            <div class="icon-bar">
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+                    <a href="#" class="google"><i class="fa fa-google"></i></a> 
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+            
+                    
+                  </div>
+
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+                <img  src="manhattan_panorama.JPG" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+                <img src="tramview.JPG" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+                <img src="centralparkatnight.JPG" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+                <img src="metroinside.JPG" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+                <img src="metmuseumview.JPG" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+                <img src="DSC_0024.JPG" style="width:100%">
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="manhattan_panorama.JPG" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+              </div>
+              <div class="column"> 
+                <img class="demo cursor" src="tramview.JPG" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="centralparkatnight.JPG" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="metroinside.JPG" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="metmuseumview.JPG" style="width:100%"; onclick="currentSlide(5)" alt="Nature and sunrise">
+              </div> 
+              <div class="column">
+                <img class="demo cursor" src="DSC_0024.JPG" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+              </div>
+            </div>
+          </div>
+
+
+
+          
+          <div class="content">
+              <div class="col1">
+                <h3 class="main-title">Dlaczego Nowy Jork?</h3>
+                <h5 class="by">Written by TravelAndSendPostcards on 5th of June 2018</h5>
+                <p><blockquot class="quote">      
+                        I want to be a part of it 
+                        New York, New York . . .</blockquot><br><br>Tak brzmi fragmrnt piosenki Franka Sinatry, któy na pewno każdy zna i czasami nuci pod nosem. Słuchając piosenki, marzymy, że kiedyś przenisiemy sie do takiego miejsca, gdzie można spełniać marzenia...Ale jaki jest właściwie Nowy Jork?</p>
+                <p>Nowy Jork ma 1.6 miliona mieszkaców. Cały obszar metropolii to ponad 8 milionów. Miasto Nowy Jork było od początku miastem wielokulturowym i wieloreligijnym.  
+             
+                    Przed przybyciem Europejczyków obszary stanu Nowy Jork te zamieszkiwali Indianie. Pierwszymi stałymi europejskimi osadnikami byli Holendrzy, którzy od 1613 roku organizowali w okolicach Manhattanu prywatne terytorium zamorskie i po zasiedleniu go przez pierwszą grupę emigrantów w 1624 przekształcili je w holenderską prowincję o nazwie Nowe Niderlandy (niderl.: Nieuw-Nederland, łac.: Novum Belgium lub Nova Belgica). </p>
+               
+                <p>Stan Nowy Jork rozciąga się od Atlantyku do jezior Ontario i Erie. Na północy graniczy z Kanadą. Główne rzeki to Niagara, Hudson i Rzeka Świętego Wawrzyńca..</p>
+                <p class="quote">Co po przylocie? </p>
+                <div class="scrollbox"><img class="img-list" src="Centralpark_mapka.png" width="500px"align="left"</></div>
+<br>
+                <div><span >Central Park</span> najlepiej zwiedzać z mapką, park jest duży i łatwo się zgubić. park miejski w Nowym Jorku będący oazą zieleni. Położony w centrum Manhattanu, między Central Park South Avenue (nazwa 59 ulicy na styku z Central Parkiem) od strony południowej a 110 ulicą od strony północnej oraz pomiędzy Piątą Aleją na wschodzie i Central Park West Avenue (przedłużenie Ósmej Alei) na zachodzie. Zajmuje 843 akry powierzchni (341 hektarów).</div>
+                <p>Lower Manhattanu <br> 
+
+                Ground Zero tzw. Strefa Zero gdzie zanjduje się pomnik upamiętaniający ofiary zamachów na dwie wieże World ttrade Center. <br>
+
+                New York Stock Exchange i dzielnica finansowa.<br>
+
+                Na pewno ciekawym punktem jest wycieczka na Statue Wolności. Bilety najlepiej kupić on-line. </p>
+
+                <p>Muzea</p>
+
+                Na pewno należy odwiedzić Metropolitan Museum i Muzeum Guggenheima. 
+
+
+
+
+                </h3>
+              </div>
+              <div class="col2">
+                <br>
+                    <h3>Ciekawostki</h3>
+    
+                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                     maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te,
+                      id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur
+                       his ad. Eum no molestiae voluptatibus.</p>
+
+                <h3>Plan wycieczki na 7 dni</h3>
+                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+               
+            </div>
+</div>
+
+
+
+
+<script>
+
+    
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("main").style.marginLeft = "200px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+
+
+</script>
+     
+</body>
