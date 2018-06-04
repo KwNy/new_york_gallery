@@ -1,0 +1,111 @@
+<html>
+<body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+<meta charset="utf-8">
+</head>
+
+<style>
+
+ body {
+    width:100%;
+    height:100%;
+    margin: 0 auto;
+    max-width: 960px;
+    background-color:  whitesmoke;
+    color:black;
+    font-family: "Allura";
+
+}
+
+
+.about1{
+    height: 400px;
+    width: 900px;
+    background:rgba(29, 14, 21, 0.151);
+
+    position: fixed;
+    margin-top: 100px;
+
+}
+.about2{
+    height: 400px;
+    width: 900px;
+    background:rgba(29, 14, 21, 0.151);
+
+    position: fixed;
+    margin-top: 200px;
+    margin-left:100px;
+}
+
+#main-content-about{margin-top: 100px;     font-size: 46px;
+
+}
+
+
+.titleofpage{font-family:  'Allura';font-size: 60px;text-align: center;position: fixed;    padding: 0px 350px;
+    margin: auto;
+}
+
+.button {
+
+  /* padding: 15px 25px; */
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: grey;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: fixed; 
+  /* margin-top: 20px; */
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+<head>
+        <title>About</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+</head>
+
+<h1 class="titleofpage">About</h1>
+
+<div id="main-content-about">
+
+
+<button class="button" onclick="goBack()">Go Back</button>
+
+<div class="about2">
+<p>A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.</p>
+</div>
+
+<div class="about1">
+<p>A paragraph with a floating image</p> 
+</div>
+
+</div>
+<script>
+
+    function goBack() {
+    window.history.back();}
+    
+    </script>
+
+</body>
+</html>
